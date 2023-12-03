@@ -2,7 +2,7 @@
 
 This is a simple factorial calculator. You can build this program using GNU make,
 just `cd` into project directory and run `make` command. To do this on debian based
-systems, you need to install `build-essential` pakage. The compiled program will
+systems, you need to install `build-essential` package. The compiled program will
 be saved in build folder inside the project directory. Below are the commands that
 can be used to build and start the program.
 
