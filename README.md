@@ -17,7 +17,7 @@ $ build/falco
 Falco supports 3 modes in which it can calculate factorials.
 
 - **normal**
-  This is default mode. Calculation of factorial is preformed using long double variables and a for loop. This is the fastest way to calculate small factorials. But just like with stirling mode, size of factorial is limited
+  This is default mode. Calculation of factorial is preformed using double variables and a for loop. This is the fastest way to calculate small factorials. But just like with stirling mode, size of factorial is limited
 
 - **precise**
   In this mode our small bigint library is used to calculate value of factorial. Library is very basic and only supports a few operations, but this allows us to calculate factorial of any size. By default this mode is limited to factorial of 1000000 but you can extend this limit if you need.

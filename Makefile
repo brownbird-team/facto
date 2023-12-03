@@ -32,7 +32,7 @@ MKDIR = mkdir -p $1
 # Nothing to do with slashes
 FixPath = $(1)
 # Find all files inside SRC_DIR directory
-SRCS := $(shell find $(SRC_DIR) -or -name '*.c')
+SRCS := $(shell find $(SRC_DIR) -name '*.c')
 endif
 
 endif

@@ -18,7 +18,8 @@
 
 // Calculate factorial using double variables
 void factorial_calc_normal(char *str, FILE *out_file, FILE *err_file) {
-    long double n, result = 1;
+    int n;
+    double result = 1;
 
     if (!digits_only(str)) {
         fprintf(err_file, "facto error: Factorial must contain only digits 0-9\n");
@@ -27,18 +28,18 @@ void factorial_calc_normal(char *str, FILE *out_file, FILE *err_file) {
 
     if (!number_smaller_or_equal(str, FACTORIAL_MAX_NORMAL)) {
         fprintf(err_file, 
-            "facto error: Maximum factorial [%s] mode can calculate is %s!\n", 
+            "facto error: Maximum factorial [%s] mode can calculate is %s!\n",
             facto_mode_name(FACTO_MODE_NORMAL), FACTORIAL_MAX_NORMAL
         );
         return;
     }
 
-    sscanf(str, "%llf", &n);
+    sscanf(str, "%d", &n);
 
-    while (n > 0.0L)
+    while (n > 0)
         result *= (n--);
 
-    fprintf(out_file, "%s! = %.2llf\n", str, result);
+    fprintf(out_file, "%s! = %.2lf\n", str, result);
 }
 
 // Calculate factorial using bigint library
