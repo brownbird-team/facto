@@ -274,8 +274,6 @@ int bigint_to_string(struct bigint *bi, char *str, long str_len);
 
 int bigint_fprint(struct bigint *bi, FILE *out_file);
 
-#define bigint_print(bi) bigint_fprint((bi), stdout)
-
 
 /*
  * Function: bigint_fprint_error
@@ -289,7 +287,5 @@ int bigint_fprint(struct bigint *bi, FILE *out_file);
  */
 
 void bigint_fprint_error(int error_code, FILE *out_file);
-
-#define bigint_print_error(error_code) bigint_fprint_error((error_code), stderr)
 
 #endif
