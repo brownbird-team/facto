@@ -1,0 +1,24 @@
+#ifndef _INCLUDE_CONSTANTS_H_
+#define _INCLUDE_CONSTANTS_H_
+
+#define FACTO_E  2.71828182845904523536
+#define FACTO_PI 3.14159265358979323846
+
+#define FACTO_VERSION "1.0.0"
+
+#define FACTO_CMD_HELP "help"
+#define FACTO_CMD_EXIT "exit"
+#define FACTO_CMD_VERSION "version"
+#define FACTO_CMD_CURRENT_MODE "mode"
+
+#define FACTO_CMD_MODE_NORMAL "normal"
+#define FACTO_CMD_MODE_PRECISE "precise"
+#define FACTO_CMD_MODE_STIRLING "stirling"
+
+enum facto_modes {
+    FACTO_MODE_NORMAL,
+    FACTO_MODE_PRECISE,
+    FACTO_MODE_STIRLING,
+};
+
+#endif
