@@ -1,3 +1,14 @@
+/*
+ * FACTORIAL CALCULATION
+ *
+ * This functions are abstraction for factorial calculation, they take number
+ * string from console and a file descriptor where they should write result of
+ * the calculation and another file where they should write errors
+ * 
+ * Made by rdobovic
+ * 
+ */
+
 #include <math.h>
 #include <string.h>
 #include <factorial.h>

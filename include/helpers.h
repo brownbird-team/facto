@@ -1,3 +1,12 @@
+/*
+ * HELPER FUNCTIONS
+ *
+ * This file contains helper functions used accross the whole project
+ * 
+ * Made by rdobovic
+ * 
+ */
+
 #ifndef _INCLUDE_HELPERS_H_
 #define _INCLUDE_HELPERS_H_
 

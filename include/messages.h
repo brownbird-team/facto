@@ -13,6 +13,7 @@
 
 #include <stdio.h>
 #include <factorial.h>
+#include <constants.h>
 
 void print_project_motd(void) {
     printf(
@@ -31,26 +32,45 @@ void print_project_motd(void) {
 
 void print_help_message(void) {
     printf(
-        "Facto is a simple factorial calculator. It can be used to calculate\n"
+        BOLD "Facto" BOLDEND " is a simple factorial calculator. It can be used to calculate\n"
         "factorials in 3 different ways, each with it's own way and precision.\n"
-        "Following modes (ways) are supported, you can enter each mode by\n"
-        "typing its name\n\n"
+        "Following commands are supported:\n\n"
 
-        ">> normal <<\n"
-        "This mode uses double variables to store result of factorial and thus\n"
-        "can calculate up to %s!\n\n"
+        BOLD FACTO_CMD_HELP "\n" BOLDEND
+        "    Prints this help message\n\n"
 
-        ">> precise <<\n"
-        "This mode uses big integers to calculate factorial and should be able\n"
-        "to calculate factorial of any number, but because of hardware\n"
-        "limitations this mode is limited to %s!\n\n"
+        BOLD "<number>!\n" BOLDEND
+        "    Calculates factorial of given <number> in current mode\n\n"
 
-        ">> stirling <<\n"
-        "This mode approximates value of factorial using stirling's formula, it\n"
-        "also uses doubles like the normal mode and is limited to %s!\n\n"
+        BOLD FACTO_CMD_CURRENT_MODE "\n" BOLDEND
+        "    Displays in which mode program is operating in\n\n"
 
-        "To calculate factorial you simply type <number>!\n"
-        "And of course command help prints this message, good luck :)\n\n",
+        BOLD FACTO_CMD_MODE_NORMAL "\n" BOLDEND
+        "    Switches to normal mode, this mode uses double variables to store\n"
+        "    result of factorial and thus can calculate up to %s!\n\n"
+
+        BOLD FACTO_CMD_MODE_PRECISE "\n" BOLDEND
+        "    Switches to precise mode, this mode uses big integers to calculate\n"
+        "    factorial and should be able to calculate factorial of any number,\n"
+        "    but because of hardware limitations this mode is limited to %s!\n\n"
+
+        BOLD FACTO_CMD_MODE_STIRLING "\n" BOLDEND
+        "    Switches to stirling mode, this mode approximates value of factorial\n"
+        "    using stirling's formula, it also uses doubles like the normal mode and\n"
+        "    is limited to %s!\n\n"
+
+        BOLD FACTO_CMD_OUTPUT " <path>\n" BOLDEND
+        "    Saves result of factorial calculation into specified file, if called\n"
+        "    without an argument prints current output file. If you wish to reset\n"
+        "    output back to standard output, type "BOLD"STDOUT"BOLDEND" as filename\n\n"
+
+        BOLD FACTO_CMD_VERSION "\n" BOLDEND
+        "    Prints current program version\n\n"
+
+        BOLD FACTO_CMD_EXIT "\n" BOLDEND
+        "    Finishes the execution of the program\n\n"
+
+        "good luck :)\n",
 
         FACTORIAL_MAX_NORMAL, FACTORIAL_MAX_PRECISE, FACTORIAL_MAX_STIRLING
     );

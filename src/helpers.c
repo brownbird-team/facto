@@ -1,5 +1,11 @@
-#ifndef _INCLUDE_HELPERS_H_
-#define _INCLUDE_HELPERS_H_
+/*
+ * HELPER FUNCTIONS
+ *
+ * This file contains helper functions used accross the whole project
+ * 
+ * Made by rdobovic
+ * 
+ */
 
 #include <ctype.h>
 #include <string.h>
@@ -76,5 +82,3 @@ int timeval_subtract(struct timeval *result, struct timeval *x, struct timeval *
 
     return x->tv_sec < y->tv_sec;
 }
-
-#endif
