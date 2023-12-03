@@ -113,6 +113,12 @@ int bigint_parse(struct bigint *bi, char *str, long str_len) {
     }
 
     bi->chunks_used = num_index + 1;
+
+    for (i = 0; i < bi->chunks_used; i++)
+        if (bi->num[i] > 0)
+            return 0;
+
+    bi->chunks_used = 0;
     return 0;
 }
 

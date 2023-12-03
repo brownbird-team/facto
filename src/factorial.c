@@ -72,6 +72,7 @@ void factorial_calc_precise(char *str, FILE *out_file, FILE *err_file) {
     }
 
     err |= bigint_parse(n, str, strlen(str));
+    err |= bigint_parse(res[0], "1", 1);
     err |= bigint_parse(res[1], "1", 1);
 
     if (!err)
