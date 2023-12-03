@@ -20,7 +20,7 @@ ToLinuxSlashes = $(subst \,/,$(1))
 # Set shell to CMD
 SHELL=C:\Windows\system32\cmd.exe
 # Find all files inside SRC_DIR directory
-SRCS := $(call ToLinuxSlashes, $(shell for /f %%A in ('forfiles /p $(SRC_DIR) /s /m *.cpp /c "cmd /c echo @relpath"') do echo $(SRC_DIR)\%%~A))
+SRCS := $(call ToLinuxSlashes, $(shell for /f %%A in ('forfiles /p $(SRC_DIR) /s /m *.c /c "cmd /c echo @relpath"') do echo $(SRC_DIR)\%%~A))
 
 else
 
@@ -32,7 +32,7 @@ MKDIR = mkdir -p $1
 # Nothing to do with slashes
 FixPath = $(1)
 # Find all files inside SRC_DIR directory
-SRCS := $(shell find $(SRC_DIR) -name '*.cpp' -or -name '*.c')
+SRCS := $(shell find $(SRC_DIR) -or -name '*.c')
 endif
 
 endif
