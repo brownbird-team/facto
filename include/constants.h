@@ -16,7 +16,7 @@
 #define FACTO_PI 3.14159265358979323846
 
 // Current version
-#define FACTO_VERSION "1.0.0"
+#define FACTO_VERSION "1.0.1"
 
 // Command to print help message
 #define FACTO_CMD_HELP "help"
